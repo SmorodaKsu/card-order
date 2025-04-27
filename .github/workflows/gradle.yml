@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
-          distribution: 'adoptopenjdk'  # Убедитесь, что указали правильное распределение
+          distribution: 'adoptium'  # Убедитесь, что это adoptium
 
       - name: Cache Gradle dependencies
         uses: actions/cache@v3
@@ -32,3 +32,5 @@ jobs:
 
       - name: Run tests with Gradle
         run: ./gradlew test
+
+
